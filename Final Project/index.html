@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+  
+<body>
+  <h1>Dog Breed Popularity vs. Cost Data Analysis Reflection</h1> 
+   <h1> By Andi Orashan</h1>
+   <center><img src="dogs and money.jfif" class="centerImage" height="200" width="300"></center>
+<p>Dogs are known as "man's best friend" and are a very common household pet. There are many different dog breeds and each has different characteristics, prices and lifespan. Many people looking to get a dog may wonder if the cost of the dog depends on the popularity of the breed so that they can decide if the cost is reasonable or a scam. So, I found some data and went to work trying to answer that question.</p>
+
+  
+  <u><h2> About the Data</h2></u>
+  <p>You can look at the data I used <a href="https://www.kaggle.com/datasets/paultimothymooney/best-in-show-data-about-dogs"> here.</a> This data was last updated in 2020 and includes dog breeds, median costs in US currency ($), lifetime costs, popularity in the US, intelligence and more. For the purpose of my research and question I only needed the popularity and the cost for each breed. The popularity was collected through the US. American Kennel Club registrations 2011 and included pure breeds only. Since it only includes pure breeds there is a certain inaccuracy with the popularities and any mix breed dogs. The cost of each dog breed is a mean cost from <i>puppyfind.com</i>.</p>
+
+  
+  <u><h3> The Analysis Process</h3></u>
+  <p>Using <i>Jupyter Notebook, Pandas, and Seaborn</i> I removed the data I didn't need and removed any rows that were missing data. This left me with the "POPULARITY IN US" and "4a average purchase price, US$" columns and 87 out of the original 175 data points to work with. I then went to the Excel sheet containing the data and translated the "4a average purchase price, US$" column to numerical form. This was the simplest way to do this without having any errors. After saving the changed document, I reran my code and used <i>Pandas</i> to translate my data from object types to integers so that I could plot and collect statistical data. I chose to use the <a href="https://en.wikipedia.org/wiki/Pearson_correlation_coefficient"> Pearson correlation coefficient</a> as a statistical framework for my conclusion. I chose the Pearson correlation coefficient because it gives you a number that tells you how much two things correlate with eachother. The correlation between "POPULARITY IN US" and "4a average purchase price, US$" is 0.096031, which is not statistically significant and tells me that according to the data the popularity of a dog breed in the US does not affect the cost of that breed.I then created a scatter plot of the data with a line of best fit to visually confirm the statistic.</p>
+</figure><center><img src="DogPopularityvsCost.png" class="centerImage" height="400" width="400"></center>
+
+  <u><h4>Conclusions</h4></u>
+  <p>Based on the scatter plot and the Pearson correlation coefficient I am confident in saying that according to this data the popularity of a dog breed does not affect the buying price of the breed in the US. I also found that there isn't much of a difference between the price of dog breeds. Since I did not personally collect the data I can not be sure that it is accurate. It is good to keep in mind that the data is not the most recent and that may affect the results as well as the data coming from many sources. Finally, you can look at my code <a href="http://localhost:8888/notebooks/OneDrive/Documents/GitHub/CCIC_DataScience1/Unit2Final-Copy1.ipynb"> here.</a></p> 
+</body>
+
+</html>
